@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Quicksand:wght@400;700&display=swap');
 
 :root {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-size: 1rem;
 }
 
@@ -64,8 +64,8 @@ footer p:nth-child(2) {
 
 h1, h2 {
     font-weight: 700;
-    /* background-color: bisque; */
     margin: 1rem 0;
+    font-family: "Cinzel Decorative", cursive;
 }
 
 h2 {
