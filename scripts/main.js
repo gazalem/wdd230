@@ -5,9 +5,17 @@ let currentYear = document.querySelector("#year");
 // insert in HTML element the year portion of date
 currentYear.textContent = date.getFullYear();
 
-
+// options for locale time format of dates
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 // last modified of document
-let lastModification = `Last Updated: ${document.lastModified}`;
+let lastModification = new Date(document.lastModified);
 let lastModifiedId = document.querySelector("#lastmodified");
-lastModifiedId.textContent = lastModification;
-
+lastModifiedId.textContent = `Last Updated: ${lastModification.toLocaleTimeString(
+  "en-US",
+  options
+)}`;
