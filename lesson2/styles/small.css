@@ -1,0 +1,46 @@
+:root {
+    font-size: 1.3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+h1 {
+    margin: 1rem 0 0 0;
+}
+
+h2 {
+    margin: 0 0 1rem 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    margin:  0 auto;
+    background-color: yellowgreen;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #023047;
+    justify-items: center;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #219EBC;
+}
+
+article img {
+    margin: 2rem 0 0 0;
+    width: 100%;
+    object-fit: cover;
+    
+}
