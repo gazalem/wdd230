@@ -55,10 +55,10 @@ footer p:nth-child(2) {
   color: yellow;
 }
 
-/* .profilepic {
-  max-width: 150px;
+.profilepic {
+  max-width: 117px;
   max-height: 150px;
-} */
+}
 
 h1,
 h2 {
