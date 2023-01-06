@@ -58,6 +58,7 @@ footer p:nth-child(2) {
 .profilepic {
   max-width: 117px;
   max-height: 150px;
+  margin-left: 1rem;
 }
 
 h1,
@@ -73,4 +74,36 @@ h2 {
 
 hr {
   margin: 2rem 0;
+}
+
+section {
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 872px;
+  }
+  
+  header {
+    gap: 4rem;
+  }
+  
+  footer {
+    height: 8rem;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+  
+  footer p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+  
+  h1,
+  h2 {
+    margin: 1rem 1rem 1rem 0;
+  }
+  
 }
