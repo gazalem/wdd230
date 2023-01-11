@@ -1,0 +1,28 @@
+@media only screen and (min-width: 32.5em) {
+    main {
+        max-width: 90vw;
+      }
+      
+      header {
+        gap: 4rem;
+        border-radius: 0.5rem;
+      }
+      
+      footer {
+        height: 10rem;
+        border-radius: 0.5rem;
+      }
+      
+      footer p {
+        font-size: 1rem;
+      }
+      
+      footer p:nth-child(1) {
+        font-size: 1.5rem;
+      }
+      
+      h1,
+      h2 {
+        margin: 1rem 0;
+      }
+}
