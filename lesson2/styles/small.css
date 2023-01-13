@@ -16,8 +16,13 @@ main {
     gap: 0.5rem;
 }
 
-header {
+header, footer {
     background-color: #023047;
+}
+
+footer {
+    color: white;
+    text-align: center;
 }
 
 header h1, h2 {
