@@ -27,6 +27,7 @@
     section {
         padding-top: 138.4px;
         margin: 1.2rem 0;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     footer {

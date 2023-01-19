@@ -1,10 +1,19 @@
 :root {
-    font-size: 16px;
-    font-family: Lato, sans-serif;
+    --base-font-size: 16px;
+    --heading-fonts: "Arvo", serif;
+    --content-fonts: "Lato", sans-serif;
+    /* My Color Pallet */
+    /* https://coolors.co/111378-e63946-f1faee-a8dadc-457b9d */
+    --main-color: rgba(17,69,120,1);
+    --nav-color: rgb(69, 123, 157);
+    --nav-hover: rgb(168, 218, 220);
+    --contrast-color: rgb(230, 57, 70);
 }
 
 body {
     margin: 0;
+    font-size: var(--base-font-size);
+    font-family: var(--content-fonts);
 }
 
 main {
@@ -17,19 +26,20 @@ main {
 
 h1 {
     text-align: center;
-    background-color: darkblue;
+    background-color: var(--main-color);
     padding: 1rem 0;
     margin: 0;
     color: white;
-    font-family: "Arvo", serif;
+    font-family: var(--heading-fonts);
 }
 
 h2, h3 {
-    font-family: "Arvo", serif;
+    font-family: var(--heading-fonts);
 }
 
 nav ul {
-    border: 1px solid rgb(212, 20, 20);
+    /* border: 1px solid rgb(212, 20, 20); */
+    border: 1px solid var(--nav-color);
     display: flex;
     list-style: none;
     margin: 0;
@@ -49,7 +59,8 @@ nav ul li a {
     letter-spacing: 2px;
     width: 100%;
     display: inline-block;
-    background: rgb(238, 13, 13);
+    background: var(--nav-color);
+    /* background: rgb(238, 13, 13); */
 }
 
 nav ul li a:visited {
@@ -57,7 +68,9 @@ nav ul li a:visited {
 }
 
 nav ul li a:hover {
-    background: rgba(238, 13, 13, 0.75);
+    /* background: rgba(238, 13, 13, 0.75); */
+    background: var(--nav-hover);
+    color: var(--contrast-color);
     font-weight: bold;
 }
 
@@ -73,7 +86,7 @@ img {
 }
 
 footer {
-    background-color: darkblue;
+    background-color: var(--main-color);
     color: white;
     text-align: center;
 }
