@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+:root {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    background-color: darkblue;
+    padding: 1rem 0;
+    margin: 0;
+    color: white;
+    font-family: "Arvo", serif;
+}
+
+h2, h3 {
+    font-family: "Arvo", serif;
+}
+
+nav ul {
+    border: 1px solid rgb(212, 20, 20);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+nav ul li {
+    flex: 0 1 auto;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 0px;
+    letter-spacing: 2px;
+    width: 100%;
+    display: inline-block;
+    background: rgb(238, 13, 13);
+}
+
+nav ul li a:visited {
+    color: white;
+}
+
+nav ul li a:hover {
+    background: rgba(238, 13, 13, 0.75);
+    font-weight: bold;
+}
+
+section {
+    padding: 0 0.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+}

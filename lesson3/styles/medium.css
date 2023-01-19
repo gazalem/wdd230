@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@media only screen and (min-width: 32.5rem) {
+    main {
+        margin: 0 auto;
+        width: 80vw;
+    }
+
+    header {
+        /* align here */
+        box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+        border-radius: 0px 0px 5px 5px;
+        position: fixed;
+        /* z-index: -1; */
+        top: 0;
+        width: 80vw;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        align-items: flex-end;
+        border-radius: 0px 0px 5px 5px;
+    }
+    
+    nav ul li {
+        flex: 1 1 auto;
+    }
+    
+    section {
+        padding-top: 138.4px;
+        margin: 1.2rem 0;
+    }
+    
+    footer {
+        border-radius: 5px 5px 0px 0px;
+        box-shadow: 0px -7px 30px 0px rgba(0,0,0,0.75);
+    }
+    
+}
