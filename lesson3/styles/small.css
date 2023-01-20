@@ -86,7 +86,12 @@ nav ul li a:hover {
 section {
     padding: 0 0.5rem;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
+}
+
+article p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .logo {
