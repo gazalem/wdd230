@@ -39,7 +39,6 @@ header {
 }
 
 header .currentdate {
-    grid-area: currentdate;
     color: #fff;
     width: 100%;
     text-align: center;
@@ -116,6 +115,10 @@ nav.open { display: block; }
     padding: 0 .5rem;
 }
 
+.socialmedia a:hover {
+    color: var(--accent-color-2);
+}
+
 main {
     display: grid;
     gap: .5rem;
@@ -137,6 +140,10 @@ main div {
 
 .spotlight div {
     height: 50%;
+}
+
+.spotlight3 {
+    display: none;
 }
 
 .join {

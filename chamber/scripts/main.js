@@ -41,7 +41,6 @@ const currentDateOptions = {
 
   // Fuction to toggle hamburger menu
 function toggleMenu() {
-  console.log("It Worked!");
   document.querySelector(".menu").classList.toggle("open");
   document.querySelector("#hamburgerBtn").classList.toggle("open");
 }

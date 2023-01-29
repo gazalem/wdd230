@@ -1,0 +1,86 @@
+@media only screen and (min-width: 60rem) {
+    #hamburgerBtn {
+        display: none;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 256px 1fr 1fr 100px;
+        grid-template-areas: 
+            "logo mymenu mymenu social"
+            "date date date date";
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    nav {
+        grid-area: mymenu;
+        display: inline;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav ul a {
+        border-top: none;
+    }
+
+    .socialmedia {
+        grid-area: social;
+    }
+
+    .currentdate {
+        grid-area: date;
+    }
+
+    /* Content Large Layout */
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 30vw);
+        grid-template-areas:
+            "event hero hero spotlight"
+            "weather hero hero spotlight"
+            "join news news spotlight";
+    }
+
+    .herobanner {
+        grid-area: hero;
+    }
+
+    .news {
+        grid-area: news;
+    }
+
+    .spotlight {
+        grid-area: spotlight;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .spotlight div {
+        height: 100%;
+        width: auto;
+    }
+
+    .spotlight3{
+        display: block;
+    }
+
+    .join {
+        display: block;
+        grid-area: join;
+    }
+
+    .events {
+        grid-area: event;
+    }
+
+    .weather {
+        grid-area: weather;
+    }
+}
