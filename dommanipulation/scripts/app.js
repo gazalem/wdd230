@@ -7,7 +7,11 @@ addChapterBtn.addEventListener("click", () => {
 
     // Create Delete button of the item
     const deleteBtn = document.createElement("button");
-    deleteBtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+    deleteBtn.innerHTML = `<i class="fa-regular fa-trash-alt"></i>`;
+    deleteBtn.style.border = "none";
+    deleteBtn.style.color = "red";
+    deleteBtn.style.backgroundColor = "transparent";
+    deleteBtn.style.fontSize = "1.5rem"
     deleteBtn.ariaLabel = "Close.";
     
     // insert values to the list Item
