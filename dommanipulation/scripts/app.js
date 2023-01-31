@@ -8,7 +8,7 @@ addChapterBtn.addEventListener("click", () => {
     // Create Delete button of the item
     const deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-    deleteBtn.id = "delete";
+    deleteBtn.ariaLabel = "Close.";
     
     // insert values to the list Item
     listItem.append(favChapter.value, deleteBtn);
@@ -23,4 +23,6 @@ addChapterBtn.addEventListener("click", () => {
     deleteBtn.addEventListener("click", () => {
         listOfChapters.removeChild(listItem);
     });
+
+
 });
