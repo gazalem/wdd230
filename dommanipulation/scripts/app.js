@@ -8,11 +8,11 @@ addChapterBtn.addEventListener("click", () => {
     // Create Delete button of the item
     const deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = `<i class="fa-regular fa-trash-alt"></i>`;
+    deleteBtn.setAttribute("aria-label", "Close");
     deleteBtn.style.border = "none";
     deleteBtn.style.color = "red";
     deleteBtn.style.backgroundColor = "transparent";
-    deleteBtn.style.fontSize = "1.5rem"
-    deleteBtn.ariaLabel = "Close.";
+    deleteBtn.style.fontSize = "1.8rem"
     
     // insert values to the list Item
     listItem.append(favChapter.value, deleteBtn);
