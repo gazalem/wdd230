@@ -15,6 +15,11 @@ addChapterBtn.addEventListener("click", () => {
     deleteBtn.style.fontSize = "1.8rem"
     
     // insert values to the list Item
+    if (favChapter.value === "") {
+        //align here
+        favChapter.focus();
+        return;
+    }
     listItem.append(favChapter.value, deleteBtn);
 
     // Insert list item to the list
@@ -22,6 +27,7 @@ addChapterBtn.addEventListener("click", () => {
 
     // clean input
     favChapter.value = "";
+    favChapter.focus();
 
     // create functionality to delete item
     deleteBtn.addEventListener("click", () => {
