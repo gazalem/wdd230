@@ -48,3 +48,24 @@ function toggleMenu() {
 const x = document.querySelector("#hamburgerBtn");
 
 x.onclick = toggleMenu;
+
+// check day of the week
+if (date.getDay() === 1 || date.getDay() === 2) {
+  // create element for the alert
+  // add the id of the element and
+  // append it to the top of the element
+  const joinus = document.createElement("div");
+  joinus.id = "comejoinus";
+  joinus.innerHTML = "<div>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m</div>";
+  document.body.prepend(joinus);
+  // create an element to close the alert
+  const closeAlert = document.createElement("div");
+  closeAlert.id = "closeAlert";
+  closeAlert.innerHTML = "<i class=\"fa-solid fa-times\"></i>";
+  // add event listener to close the element
+  closeAlert.addEventListener("click", () => {
+    joinus.remove();
+  });
+  // add element to the alert div
+  joinus.appendChild(closeAlert);
+}

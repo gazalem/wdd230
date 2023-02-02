@@ -6,9 +6,9 @@
     --content-fonts: "Lato", sans-serif;
     /* My Color Pallet */
     /* https://coolors.co/111378-e63946-f1faee-a8dadc-457b9d */
-    --primary-color: rgba(17,69,120,1);
+    --primary-color: rgba(17, 69, 120, 1);
     --secondary-color: rgb(69, 123, 157);
-    --third-color: rgb(255,255,255);
+    --third-color: rgb(255, 255, 255);
     --accent-color-1: rgb(230, 57, 70);
     --accent-color-2: rgb(168, 218, 220);
     --accent-color-3: rgba(238, 13, 13, 0.75);
@@ -29,6 +29,23 @@ body {
     font-family: var(--content-fonts);
 }
 
+#comejoinus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-color-1);
+    color: var(--third-color);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: .5rem 0;
+}
+
+#closeAlert {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
 header {
     background-color: var(--primary-color);
     display: flex;
@@ -42,7 +59,7 @@ header .currentdate {
     color: #fff;
     width: 100%;
     text-align: center;
-    margin: .5rem;
+    margin: 0.5rem;
     padding: 1rem;
     border: 1px solid var(--secondary-color);
     background-color: var(--secondary-color);
@@ -50,7 +67,7 @@ header .currentdate {
 
 header .logo {
     width: 20vw;
-    padding: .3rem;
+    padding: 0.3rem;
 }
 
 #hamburgerBtn {
@@ -75,7 +92,7 @@ nav ul {
 
 nav ul a {
     display: block;
-    padding: .8rem 2vw;
+    padding: 0.8rem 2vw;
     text-decoration: none;
     color: var(--third-color);
     border-top: 1px solid rgba(0, 0, 0, 0.5);
@@ -94,15 +111,25 @@ nav ul li a:hover {
 }
 
 /* nav ul { display: none; } */
-nav.open { display: block; }
+nav.open {
+    display: block;
+}
 
 /* Display hamburger button and hide X  */
-#hamburgerBtn span:nth-child(1) { display: block; }
-#hamburgerBtn span:nth-child(2) { display: none; }
+#hamburgerBtn span:nth-child(1) {
+    display: block;
+}
+#hamburgerBtn span:nth-child(2) {
+    display: none;
+}
 
 /* Display X and hide hamburger button */
-#hamburgerBtn.open span:nth-child(1) { display: none; }
-#hamburgerBtn.open span:nth-child(2) { display: block; }
+#hamburgerBtn.open span:nth-child(1) {
+    display: none;
+}
+#hamburgerBtn.open span:nth-child(2) {
+    display: block;
+}
 
 .socialmedia {
     flex: 1 0 auto;
@@ -112,7 +139,7 @@ nav.open { display: block; }
 .socialmedia a {
     color: var(--third-color);
     font-size: 2rem;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
 }
 
 .socialmedia a:hover {
@@ -121,16 +148,53 @@ nav.open { display: block; }
 
 main {
     display: grid;
-    gap: .5rem;
+    gap: 0.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 40vw);
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
 }
 
 main div {
     border: 1px solid black;
     padding: 1rem;
 }
+
+.herobanner {
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/herobanner.jpg");
+    color: var(--third-color);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.glass:hover {
+    background: rgba(230, 57, 70, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(238, 13, 13, 0.3);
+}
+
+.glass a {
+    text-decoration: none;
+    color: var(--third-color);
+}
+
 
 .spotlight {
     display: flex;
@@ -161,7 +225,7 @@ footer {
 
 footer img {
     width: 35vw;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 footer h3 {

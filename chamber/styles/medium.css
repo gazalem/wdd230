@@ -1,4 +1,8 @@
 @media only screen and (min-width: 32.5rem) {
+    /* Alert */
+    #comejoinus {
+        font-size: 0.9rem;
+    }
     /* Content Area */
     main {
         display: grid;
@@ -13,6 +17,12 @@
 
     .herobanner {
         grid-area: herobanner;
+    }
+
+    .glass {
+        width: 40%;
+        margin-top: 15%;
+        margin-left: 60%;
     }
 
     .news {

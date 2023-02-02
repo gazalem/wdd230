@@ -1,4 +1,20 @@
 @media only screen and (min-width: 60rem) {
+    /* Alert */
+    #comejoinus {
+        font-size: 1.5rem;
+        justify-content: space-around;
+    }
+
+    #closeAlert {
+        padding: .3rem .7rem;
+        font-size: 1.5rem;
+    }
+
+    #closeAlert:hover {
+        /* border: 2px solid var(--third-color); */
+        color: var(--primary-color)
+    }
+
     #hamburgerBtn {
         display: none;
     }
@@ -14,6 +30,8 @@
     .logo {
         grid-area: logo;
     }
+
+    img.logo { width: 15vw;}
 
     nav {
         grid-area: mymenu;
