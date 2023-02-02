@@ -3,7 +3,7 @@ const date = new Date();
 // Use querySelector to obtain html element
 const currentYear = document.querySelector("#year");
 // insert in HTML element the year portion of date
-currentYear.textContent = new Date().getFullYear();
+currentYear.textContent = date.getFullYear();
 
 // options for locale time format of dates
 const options = {
@@ -39,7 +39,7 @@ const currentDateOptions = {
   )}`;
 
 
-  // Fuction to toggle hamburger menu
+// Fuction to toggle hamburger menu
 function toggleMenu() {
   document.querySelector(".menu").classList.toggle("open");
   document.querySelector("#hamburgerBtn").classList.toggle("open");
