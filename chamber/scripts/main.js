@@ -69,3 +69,9 @@ if (date.getDay() === 1 || date.getDay() === 2) {
   // add element to the alert div
   joinus.appendChild(closeAlert);
 }
+
+// Must connect to API to retrieve
+// weather conditions according to the
+// geolocalization
+function getWeather() {
+};

@@ -29,6 +29,16 @@ body {
     font-family: var(--content-fonts);
 }
 
+h1, h2, h3, h4 {
+    font-family: var(--heading-fonts);
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
 #comejoinus {
     display: flex;
     flex-direction: row;
@@ -150,21 +160,24 @@ main {
     display: grid;
     gap: 0.5rem;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 40vw);
+    /* grid-template-rows: repeat(5, 100px); */
     padding: 0 0.5rem;
 }
 
 main div {
     border: 1px solid black;
     padding: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
 }
 
 .herobanner {
     /* background-attachment: fixed; */
     background-position: center;
     background-size: cover;
-    background-image: url("../images/herobanner.jpg");
+    background-image: url("../images/herobanner.webp");
     color: var(--third-color);
+    height: 30vh; /* keep the herobanner in certain size for viewport */
 }
 
 .glass {
@@ -175,7 +188,7 @@ main div {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     width: 50%;
-    margin-top: 10%;
+    margin-top: 20%;
     margin-left: 50%;
     text-align: center;
     font-weight: bold;
@@ -188,6 +201,7 @@ main div {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(238, 13, 13, 0.3);
+    cursor: pointer;
 }
 
 .glass a {
@@ -195,15 +209,75 @@ main div {
     color: var(--third-color);
 }
 
+.events {
+    text-align: center;
+}
+
+.weather {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: var(--secondary-color);
+    grid-template-areas: 
+        "weatherTitle weatherTitle"
+        "weatherIcon temp"
+        "weatherStatus weatherStatus"
+        "windCondition windCondition";
+    color: var(--third-color);
+}
+
+.weather div {
+    border: none;
+    padding: 0;
+}
+
+.weather h2 {
+    grid-area: weatherTitle;
+    text-align: center;
+}
+
+.weather img {
+    grid-area: weatherIcon;
+    justify-self: center;
+    height: 12rem;
+}
+
+.weather #temperature {
+    grid-area: temp;
+    text-align: center;
+    font-size: 3rem;
+    align-self: center;
+}
+
+.weather #weatherStatus {
+    grid-area: weatherStatus;
+    justify-self: end;
+    font-size: 2rem;
+}
+
+.weather #windConditions {
+    grid-area: windCondition;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.4rem;
+}
 
 .spotlight {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
-.spotlight div {
-    height: 50%;
+/* .spotlight1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+p a {
+    display: block;
+    text-align: center;
+    color: var(--third-color);
 }
 
 .spotlight3 {
