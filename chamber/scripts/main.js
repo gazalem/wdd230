@@ -75,3 +75,12 @@ if (date.getDay() === 1 || date.getDay() === 2) {
 // geolocalization
 function getWeather() {
 };
+
+
+// This will fill the windChill
+// field in the weather section
+console.log("Wind Chill Factor is: ", windChill(celsiusToFahrenheit(0), kmhToMph(9)));
+console.log("Celsius to Fahrenheit: ", celsiusToFahrenheit(-10));
+console.log("Kilohms to MPH: ", Math.round(kmhToMph(13),0));
+myWindChill = windChill(35, 8);
+console.log("My Wind Chill is: ", myWindChill);

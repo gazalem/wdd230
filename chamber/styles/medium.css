@@ -17,12 +17,11 @@
 
     .herobanner {
         grid-area: herobanner;
+        position: relative;
     }
 
     .glass {
         width: 40%;
-        margin-top: 15%;
-        margin-left: 60%;
     }
 
     .news {

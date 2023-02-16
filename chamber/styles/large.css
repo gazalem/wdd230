@@ -31,7 +31,7 @@
         grid-area: logo;
     }
 
-    img.logo { width: 15vw;}
+    img.logo { width: 10vw;}
 
     nav {
         grid-area: mymenu;
@@ -100,5 +100,9 @@
 
     .weather {
         grid-area: weather;
+    }
+
+    .leftfooter img {
+        width: 15rem;
     }
 }
