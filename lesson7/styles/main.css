@@ -1,0 +1,13 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 350px;
+    justify-content: center;
+}
+
+picture img[data-src] {
+    filter: blur(4);
+}
