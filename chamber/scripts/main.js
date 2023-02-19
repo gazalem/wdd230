@@ -81,5 +81,60 @@ function getWeather() {
 // field in the weather section
 myWindChill = windChill(35, 8);
 const windChillElement = document.querySelector("#windChill");
-windChillElement.textContent = `${myWindChill.toFixed(2)}  F°`;
-console.log("My Wind Chill is: ", myWindChill);
+if (windChillElement != null) {
+  windChillElement.textContent = `${myWindChill.toFixed(2)}  F°`;
+  console.log("My Wind Chill is: ", myWindChill);
+}
+
+
+
+// get all the images with the data-src attribute
+const images = document.querySelectorAll("img[data-src]");
+
+// optional parameters being set for the IntersectionalObserver
+const imgOptions = {
+    threshold: 1,
+    rootMargin: "0px 0px 50px 0px",
+};
+
+const loadImages = (image) => {
+    image.setAttribute("src", image.getAttribute("data-src"));
+    image.onload = () => {
+        image.removeAttribute("data-src");
+    };
+};
+
+// fist check to see if Intersection Observer is supported
+if ("IntersectionObserver" in window) {
+    const imgObserver = new IntersectionObserver((items, imgObserver) => {
+        items.forEach((item) => {
+            if (item.isIntersecting) {
+                loadImages(item.target);
+                imgObserver.unobserve(item.target);
+            }
+        });
+    }, imgOptions);
+    // loop through each img on check status and load if necesary
+    images.forEach((img) => {
+        imgObserver.observe(img);
+    });
+} else { // just Load ALL the images if is not supported
+    images.forEach((img) => {
+        loadImages(img);
+    });
+}
+
+
+// check last visit
+const lastVisitElement = document.querySelector(".lastVisit");
+let lastVisit = 0;
+if (!localStorage.myLastVisit) {
+  localStorage.setItem("myLastVisit", date);
+  localStorage.setItem("myLastVisitCounter", 0);
+} else {
+  let lastVisitDate = Date.parse(localStorage.myLastVisit);
+  lastVisit = ((date - lastVisitDate) / 84600000);
+  localStorage.setItem("myLastVisitCounter", lastVisit.toFixed(0));
+  localStorage.setItem("myLastVisit", date);
+}
+lastVisitElement.textContent = `It's been ${localStorage.getItem("myLastVisitCounter")} days since your last visit.`;
