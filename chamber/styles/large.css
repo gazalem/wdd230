@@ -59,7 +59,6 @@
     main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 30vw);
         grid-template-areas:
             "event hero hero spotlight"
             "weather hero hero spotlight"
