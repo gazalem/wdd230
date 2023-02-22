@@ -83,8 +83,8 @@ myWindChill = windChill(35, 8);
 const windChillElement = document.querySelector("#windChill");
 if (windChillElement != null) {
   windChillElement.textContent = `${myWindChill.toFixed(2)}  F°`;
-  console.log("My Wind Chill is: ", myWindChill);
-}
+  // console.log("My Wind Chill is: ", myWindChill);
+};
 
 
 
@@ -137,4 +137,6 @@ if (!localStorage.myLastVisit) {
   localStorage.setItem("myLastVisitCounter", lastVisit.toFixed(0));
   localStorage.setItem("myLastVisit", date);
 }
-lastVisitElement.textContent = `It's been ${localStorage.getItem("myLastVisitCounter")} days since your last visit.`;
+if (lastVisitElement != null) {
+  lastVisitElement.textContent = `It's been ${localStorage.getItem("myLastVisitCounter")} days since your last visit.`;
+};
