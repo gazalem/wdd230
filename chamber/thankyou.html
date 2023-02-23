@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alan Montoya">
+    <meta name="description" content="Here you will find our membership plans">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- normalize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Font Awesome - Icon Library -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <link rel="stylesheet" href="styles/all.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <title>Home - Chamber of Commerce</title>
+</head>
+
+<body>
+    <!-- menu header of page -->
+    <header>
+        <img src="images/logowhite.svg" alt="Condado del Rey - Chamber of Commerce" class="logo">
+        <div class="socialmedia">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+        <nav class="menu">
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li class="active"><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="currentdate"></div>
+    </header>
+    <!-- Page Content -->
+    <main>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="leftfooter">
+            <img src="images/logowhite.svg" alt="Chamber of Commerce Logo" class="logofooter">
+            <div class="generalinfo">
+                <h3>Condado del Rey Chamber of Commerce</h3>
+                <address>
+                    Plaza Green Park<br>
+                    Local 23
+                </address>
+            </div>
+        </div>
+        <div class="rightfooter">
+            <div>info@condadochamber.com</div>
+            <div><i class="fa-solid fa-phone"></i>&nbsp;+507 123-2356</div>
+            <div><a href="#"><i class="fa-solid fa-map-marker-alt"></i>&nbsp;location</a></div>
+        </div>
+        <hr class="divisor">
+        <div class="bottomfooter">
+            <div>&copy; <span id="year"></span> Condado del Rey Chamber</div>
+            <div>Alan Montoya</div>
+            <div>WDD 230 Project</div>
+            <div>Last Modification: <span id="lastmodified"></span></div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
