@@ -171,6 +171,65 @@ main div {
     color: var(--third-color);
 }
 
+form {
+    color: var(--secondary-color);
+    padding: 0 0.5rem;
+    margin: 0 auto;
+}
+
+fieldset {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-color: var(--secondary-color);
+}
+
+.radioBtns {
+    display: grid;
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+}
+
+legend {
+    color: var(--accent-color-1);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin-right: 1rem;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    padding: 1rem;
+    border: 1 solid var(--primary-color);
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary-color)
+}
+
+.entryData input, textarea {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0.3rem;
+    width: 100%;
+    box-shadow: none;
+}
+
+.entryData input:required {
+    border-left: 6px solid var(--accent-color-3);
+}
+
 .herobanner {
     color: var(--third-color);
     padding: 0;

@@ -65,6 +65,10 @@
             "join news news spotlight";
     }
 
+    form {
+        width: 960px;
+    }
+
     .herobanner {
         grid-area: hero;
     }
