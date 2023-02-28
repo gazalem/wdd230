@@ -39,6 +39,10 @@ section {
     align-items: center;
 }
 
+section span {
+    margin-bottom: 1rem;
+}
+
 img {
     border: 5px solid white;
     border-radius: 5px;

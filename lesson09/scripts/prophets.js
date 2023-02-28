@@ -19,8 +19,8 @@ const displayProphets = (prophets) => {
         let card = document.createElement("section");
         let h2 = document.createElement("h2");
         let portrait = document.createElement("img");
-        let bday = document.createElement("p");
-        let placeBday = document.createElement("p");
+        let bday = document.createElement("span");
+        let placeBday = document.createElement("span");
 
         // Build the h2 content out to show the prophet's full name
         h2.textContent = `${prophet.name} ${prophet.lastname}`;
