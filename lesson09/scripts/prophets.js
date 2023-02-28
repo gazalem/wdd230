@@ -19,20 +19,39 @@ const displayProphets = (prophets) => {
         let card = document.createElement("section");
         let h2 = document.createElement("h2");
         let portrait = document.createElement("img");
+        let bday = document.createElement("p");
+        let placeBday = document.createElement("p");
 
         // Build the h2 content out to show the prophet's full name
         h2.textContent = `${prophet.name} ${prophet.lastname}`;
 
         // Build the image out to show the prophet's portrait
         // and relevant attributes to the image element
+        let cardinal = "";
+        if (prophet.order === 1) {
+            cardinal = "st";
+        } else if (prophet.order === 2) {
+            cardinal = "nd";
+        } else if (prophet.order === 3) {
+            cardinal = "rd";
+        } else {
+            cardinal = "th"
+        }
         portrait.src = `${prophet.imageurl}`;
-        portrait.alt = `Portrait of ${prophet.name} ${prophet.lastname}`;
+        portrait.alt = `Portrait of ${prophet.name} ${prophet.lastname} ${prophet.order+cardinal} Latter-Day President`;
         portrait.width = "340";
         portrait.height = "440";
         portrait.setAttribute("loading", "lazy");
 
+        // Add Birthday data
+        bday.textContent = `Date of Birth: ${prophet.birthdate}`;
+        // Add birth place
+        placeBday.textContent = `Place of Birth: ${prophet.birthplace}`;
+
         // Append the section(card) with the created elements
         card.appendChild(h2);
+        card.appendChild(bday);
+        card.appendChild(placeBday);
         card.appendChild(portrait);
         
         // Append to the div.cards element
