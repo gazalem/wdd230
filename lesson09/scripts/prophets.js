@@ -21,6 +21,7 @@ const displayProphets = (prophets) => {
         let portrait = document.createElement("img");
         let bday = document.createElement("span");
         let placeBday = document.createElement("span");
+        let age = document.createElement("span");
 
         // Build the h2 content out to show the prophet's full name
         h2.textContent = `${prophet.name} ${prophet.lastname}`;
@@ -48,10 +49,24 @@ const displayProphets = (prophets) => {
         // Add birth place
         placeBday.textContent = `Place of Birth: ${prophet.birthplace}`;
 
+        // Aging calculations
+        let ageInYears = 0;
+        if (prophet.death === null) {
+            let currentdate = new Date();
+            let prophetBday = new Date(prophet.birthdate);
+            ageInYears = currentdate.getFullYear() - prophetBday.getFullYear();
+        } else {
+            let prophetBday = new Date(prophet.birthdate);
+            let prophetDeath = new Date(prophet.death);
+            ageInYears = prophetDeath.getFullYear() - prophetBday.getFullYear();
+        }
+        age.textContent = `Age: ${ageInYears} years old`;
+
         // Append the section(card) with the created elements
         card.appendChild(h2);
         card.appendChild(bday);
         card.appendChild(placeBday);
+        card.appendChild(age);
         card.appendChild(portrait);
         
         // Append to the div.cards element
