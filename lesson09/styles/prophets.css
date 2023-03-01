@@ -23,6 +23,10 @@ main {
     padding: 0 0.5rem;
 }
 
+.hide {
+    display: none;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
