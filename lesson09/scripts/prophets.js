@@ -13,7 +13,7 @@ async function fetchProphetData(url) {
 const displayProphets = (prophets) => {
     // Select the output container element
     const cards = document.querySelector("div.cards");
-    cards.innerHTML = "";
+    cards.innerHTML = null;
 
     prophets.forEach(prophet => {
         // Create elements to add into the div.cards element
