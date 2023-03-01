@@ -1,18 +1,19 @@
 const dataURL = "https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json";
 
-async function getProphetData() {
-    const response = await fetch(dataURL);
+async function fetchProphetData(url) {
+    const response = await fetch(url);
     const data = await response.json();
     // We reference the prophet array of the data object
     // given the structure of the json file
     // show json data in table format
     // console.table(data.prophets);
-    displayProphets(data.prophets);
+    return data.prophets;
 }
 
 const displayProphets = (prophets) => {
     // Select the output container element
     const cards = document.querySelector("div.cards");
+    cards.innerHTML = "";
 
     prophets.forEach(prophet => {
         // Create elements to add into the div.cards element
@@ -74,4 +75,22 @@ const displayProphets = (prophets) => {
     });
 };
 
-getProphetData();
+
+// create filter for prophets
+const getProphets = async (filter="all") => {
+    let prophets = await fetchProphetData(dataURL);
+
+    if (filter === "more10years") {
+        prophets = prophets.filter((prophet) => prophet.length >= 10);
+    }
+
+    displayProphets(prophets);
+};
+
+document.querySelector("#more10years").addEventListener("click", () => {
+    getProphets("more10years");
+});
+
+document.querySelector("#all").addEventListener("click", () => { getProphets("all") });
+
+getProphets("all");
