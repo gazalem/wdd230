@@ -87,10 +87,13 @@ const getProphets = async (filter="all") => {
     displayProphets(prophets);
 };
 
+
+// create Events Listener for button filters
 document.querySelector("#more10years").addEventListener("click", () => {
     getProphets("more10years");
 });
 
 document.querySelector("#all").addEventListener("click", () => { getProphets("all") });
 
+// execute code app
 getProphets("all");
