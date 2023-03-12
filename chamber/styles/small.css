@@ -409,6 +409,41 @@ p a {
     text-align: center;
 }
 
+/* Directory */
+.directory h2 {
+    text-align: center;
+}
+
+.displayOptions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.displayOptions button {
+    background-color: var(--accent-color-3);
+    color: var(--third-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.displayOptions button:hover {
+    color: var(--accent-color-1);
+    background-color: var(--accent-color-2);
+    transition: ease-in-out .3s;
+}
+
+.mygrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 0.5rem;
+}
+
+/* end Directory Content */
+
 footer {
     background-color: var(--primary-color);
     color: var(--third-color);

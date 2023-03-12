@@ -42,48 +42,24 @@
             <ul id="primaryNav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li class="active"><a href="#">Join</a></li>
+                <li class="active"><a href="#">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="currentdate"></div>
     </header>
     <!-- Page Content -->
-        <form action="thankyou.html" method="get">
-            <!-- Applicant Information -->
-            <fieldset>
-                <legend>Applicant Information</legend>
-                <label class="entryData" >First Name* <input type="text" name="fname" required></label>
-                <label class="entryData">Last Name* <input type="text" name="lname" required></label>
-                <label class="entryData">Cell Phone* <input type="tel" name="phone" placeholder="+### ###-####" required plattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$"></label>
-                <label class="entryData" >Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-            </fieldset>
-            <!-- Business Information -->
-            <fieldset>
-                <legend>My Business Information</legend>
-                <label class="entryData">Business Name* <input type="text" name="business" required></label>
-                <label class="entryData">My Position in the Business <input type="text" name="title" pattern="[A-Za-z- ]{7,}" placeholder="Marketing Manager"></label>
-                <label class="entryData">Website<input type="url" name="url" placeholder="http//"></label>
-                <label class="entryData">Business Description
-                <textarea name="businessDescription" id="bus-description" rows="4" placeholder="Enter business description here. . ."></textarea></label>
-            </fieldset>
-            <!-- Membership Information -->
-            <fieldset>
-                <legend>Membership Level</legend>
-                <div class="radioBtns">
-                    <!-- align here -->
-                    <label><input type="radio" name="memberLevel" value="gold">Gold</label>
-                    <label><input type="radio" name="memberLevel" value="silver">Silver</label>
-                    <label><input type="radio" name="memberLevel" value="bronz">Bronze</label>
-                    <label><input type="radio" name="memberLevel" value="np">NP (Non-profit)</label>
-                </div>
-            </fieldset>
-            <!-- hidden field -->
-            <input type="hidden" id="time-now" name="time-now" value="">
-            <!-- Submit Button Form -->
-            <input type="submit" value = "Join My  Lakeside Chamber" class="submitBtn">
-        </form>
+    <main>
+        <div class="directory">
+            <h2>Business Directory</h2>
+            <div class="displayOptions">
+                <button id="grid"><i class="fa-solid fa-grip fa-3x"></i></button>
+                <button id="list"><i class="fa-solid fa-table fa-3x"></i></button>
+            </div>
+        </div>
+        <article class="mygrid"></article>
+    </main>
     <!-- footer -->
     <footer>
         <div class="leftfooter">

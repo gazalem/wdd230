@@ -11,16 +11,15 @@ const options = {
     year: "numeric",
     month: "short",
     day: "numeric",
-  };
-  
-  // last modified of document
-  let lastModification = new Date(document.lastModified);
-  let lastModifiedId = document.querySelector("#lastmodified");
-  lastModifiedId.textContent = `\xa0${lastModification.toLocaleTimeString(
+};
+
+// last modified of document
+let lastModification = new Date(document.lastModified);
+let lastModifiedId = document.querySelector("#lastmodified");
+lastModifiedId.textContent = `\xa0${lastModification.toLocaleTimeString(
     "en-US",
     options
-  )}`;
-
+)}`;
 
 // options for locale time format of dates for current Date
 const currentDateOptions = {
@@ -28,21 +27,20 @@ const currentDateOptions = {
     year: "numeric",
     month: "long",
     day: "numeric",
-  };
-  
-  // Current Date on Load
-  let mycurrentdate = new Date();
-  let currentdate = document.querySelector(".currentdate");
-  currentdate.textContent = `${mycurrentdate.toLocaleDateString(
+};
+
+// Current Date on Load
+let mycurrentdate = new Date();
+let currentdate = document.querySelector(".currentdate");
+currentdate.textContent = `${mycurrentdate.toLocaleDateString(
     "en-UK",
     currentDateOptions
-  )}`;
-
+)}`;
 
 // Fuction to toggle hamburger menu
 function toggleMenu() {
-  document.querySelector(".menu").classList.toggle("open");
-  document.querySelector("#hamburgerBtn").classList.toggle("open");
+    document.querySelector(".menu").classList.toggle("open");
+    document.querySelector("#hamburgerBtn").classList.toggle("open");
 }
 
 const x = document.querySelector("#hamburgerBtn");
@@ -51,42 +49,39 @@ x.onclick = toggleMenu;
 
 // check day of the week
 if (date.getDay() === 1 || date.getDay() === 2) {
-  // create element for the alert
-  // add the id of the element and
-  // append it to the top of the element
-  const joinus = document.createElement("div");
-  joinus.id = "comejoinus";
-  joinus.innerHTML = "<div>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m</div>";
-  document.body.prepend(joinus);
-  // create an element to close the alert
-  const closeAlert = document.createElement("div");
-  closeAlert.id = "closeAlert";
-  closeAlert.innerHTML = "<i class=\"fa-solid fa-times\"></i>";
-  // add event listener to close the element
-  closeAlert.addEventListener("click", () => {
-    joinus.remove();
-  });
-  // add element to the alert div
-  joinus.appendChild(closeAlert);
+    // create element for the alert
+    // add the id of the element and
+    // append it to the top of the element
+    const joinus = document.createElement("div");
+    joinus.id = "comejoinus";
+    joinus.innerHTML =
+        "<div>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m</div>";
+    document.body.prepend(joinus);
+    // create an element to close the alert
+    const closeAlert = document.createElement("div");
+    closeAlert.id = "closeAlert";
+    closeAlert.innerHTML = '<i class="fa-solid fa-times"></i>';
+    // add event listener to close the element
+    closeAlert.addEventListener("click", () => {
+        joinus.remove();
+    });
+    // add element to the alert div
+    joinus.appendChild(closeAlert);
 }
 
 // Must connect to API to retrieve
 // weather conditions according to the
 // geolocalization
-function getWeather() {
-};
-
+function getWeather() {}
 
 // This will fill the windChill
 // field in the weather section
 myWindChill = windChill(35, 8);
 const windChillElement = document.querySelector("#windChill");
 if (windChillElement != null) {
-  windChillElement.textContent = `${myWindChill.toFixed(2)}  F°`;
-  // console.log("My Wind Chill is: ", myWindChill);
-};
-
-
+    windChillElement.textContent = `${myWindChill.toFixed(2)}  F°`;
+    // console.log("My Wind Chill is: ", myWindChill);
+}
 
 // get all the images with the data-src attribute
 const images = document.querySelectorAll("img[data-src]");
@@ -118,25 +113,57 @@ if ("IntersectionObserver" in window) {
     images.forEach((img) => {
         imgObserver.observe(img);
     });
-} else { // just Load ALL the images if is not supported
+} else {
+    // just Load ALL the images if is not supported
     images.forEach((img) => {
         loadImages(img);
     });
 }
 
-
 // check last visit
 const lastVisitElement = document.querySelector(".lastVisit");
 let lastVisit = 0;
 if (!localStorage.myLastVisit) {
-  localStorage.setItem("myLastVisit", date);
-  localStorage.setItem("myLastVisitCounter", 0);
+    localStorage.setItem("myLastVisit", date);
+    localStorage.setItem("myLastVisitCounter", 0);
 } else {
-  let lastVisitDate = Date.parse(localStorage.myLastVisit);
-  lastVisit = ((date - lastVisitDate) / 84600000);
-  localStorage.setItem("myLastVisitCounter", lastVisit.toFixed(0));
-  localStorage.setItem("myLastVisit", date);
+    let lastVisitDate = Date.parse(localStorage.myLastVisit);
+    lastVisit = (date - lastVisitDate) / 84600000;
+    localStorage.setItem("myLastVisitCounter", lastVisit.toFixed(0));
+    localStorage.setItem("myLastVisit", date);
 }
 if (lastVisitElement != null) {
-  lastVisitElement.textContent = `It's been ${localStorage.getItem("myLastVisitCounter")} days since your last visit.`;
-};
+    lastVisitElement.textContent = `It's been ${localStorage.getItem(
+        "myLastVisitCounter"
+    )} days since your last visit.`;
+}
+
+/*
+ *  Directory Page Fetch Data
+ */
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector(".mygrid");
+
+// Event Listener Buttons
+gridbutton.addEventListener("click", () => {
+    display.classList.add("grid");
+    display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", () => {
+    display.classList.add("list");
+    display.classList.remove("grid");
+});
+
+// fetch data for directory
+const jsonURL = "data/data.json";
+
+async function getDirectoryData(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data.businessDirectory);
+    // return data;
+}
+
+getDirectoryData();
