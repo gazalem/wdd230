@@ -410,6 +410,11 @@ p a {
 }
 
 /* Directory */
+.directory {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    padding: 1rem;
+}
 .directory h2 {
     text-align: center;
 }
@@ -436,11 +441,84 @@ p a {
     transition: ease-in-out .3s;
 }
 
-.mygrid {
+.mygrid .cards {
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 0.5rem;
+    color: var(--third-color);
 }
+
+.mygrid .cards section:nth-child(2) img {
+    background-color: #ff671b;
+}
+
+.mygrid .cards section:nth-child(4) img {
+    background-color: #ee3442;
+}
+
+.mygrid .cards section:nth-child(8) img {
+    background-color: rgb(35, 33, 34);
+}
+
+.mygrid .cards section {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+}
+
+.mygrid .cards section img {
+    width: 100%;
+    background-color: var(--third-color);
+}
+
+.mygrid .cards section a {
+    color: var(--third-color);
+    text-decoration: none;
+}
+
+.mygrid .cards section a:hover {
+    color: var(--accent-color-1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mygrid .cards section p {
+    margin: 0;
+}
+
+.list .cards {
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+.list section {
+	display: block;
+	margin: 0;
+	padding: 10px;
+    width: 100%;
+}
+.list section img {
+	display: none;
+}
+
+.list section a {
+    color: var(--third-color);
+}
+
+.list section:nth-child(even) {
+	background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.list .cards section:nth-child(odd) a {
+    color: black;
+}
+
 
 /* end Directory Content */
 

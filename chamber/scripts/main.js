@@ -143,17 +143,17 @@ if (lastVisitElement != null) {
  */
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector(".mygrid");
+const display = document.querySelector("article.mygrid");
 
 // Event Listener Buttons
 gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
+    display.classList.add("mygrid");
     display.classList.remove("list");
 });
 
 listbutton.addEventListener("click", () => {
     display.classList.add("list");
-    display.classList.remove("grid");
+    display.classList.remove("mygrid");
 });
 
 // fetch data for directory
@@ -161,9 +161,48 @@ const jsonURL = "data/data.json";
 
 async function getDirectoryData(url) {
     const response = await fetch(url);
-    const data = await response.json();
-    console.log(data.businessDirectory);
-    // return data;
+    if (response.ok) {
+        const data = await response.json();
+        displayDirectoryData(data.businessDirectory);
+    } else {
+        console.log("Something get wrong!");
+    }
 }
 
-getDirectoryData();
+
+const displayDirectoryData = (data) => {
+    const cards = document.querySelector("section.cards");
+    // create card structure
+    data.forEach(company => {
+        // create elements for directory
+        const card = document.createElement("section");
+        const companyName = document.createElement("h2");
+        const companyLogo = document.createElement("img");
+        const companySite = document.createElement("a");
+        const companyPhone = document.createElement("p");
+        const companyAddress = document.createElement("address");
+        // build tag with data
+        companyName.textContent = company.name;
+        companyLogo.src = company.imageurl;
+        companyLogo.alt = `${company.name} Logo`;
+        companyLogo.width = 500;
+        companyLogo.loading = "lazy";
+        companySite.href = company.website;
+        companySite.target = "_blank";
+        companySite.textContent = "Website";
+        companyAddress.textContent = company.address;
+        companyPhone.textContent = company.phone;
+        // Append Child to the parent
+        card.appendChild(companyLogo);
+        card.appendChild(companyName);
+        card.appendChild(companyAddress);
+        card.appendChild(companyPhone);
+        card.appendChild(companySite);
+        // Append to the page Parent
+        cards.appendChild(card);
+    });
+
+};
+
+// load directory companies
+getDirectoryData(jsonURL);

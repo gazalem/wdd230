@@ -92,6 +92,15 @@
         grid-area: hrdivisor;
         width: 100%;
     }
+    /* directory styles */
+    .list section {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        margin: 0;
+        padding: 5px;
+        width: 100%;
+    }
+    /* end directory styles */
 
     .bottomfooter {
         grid-area: bottom;
