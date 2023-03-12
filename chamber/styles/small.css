@@ -510,6 +510,10 @@ p a {
     color: var(--third-color);
 }
 
+.list section a:hover {
+    color: var(--accent-color-1);
+}
+
 .list section:nth-child(even) {
 	background-color: var(--secondary-color);
     color: var(--third-color);
@@ -517,6 +521,10 @@ p a {
 
 .list .cards section:nth-child(odd) a {
     color: black;
+}
+
+.list .cards section:nth-child(odd) a:hover {
+    color: var(--accent-color-1);
 }
 
 
