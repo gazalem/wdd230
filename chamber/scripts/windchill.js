@@ -12,7 +12,7 @@ function kmhToMph(speedKmh) {
 
 function windChill(fahrenheitTemp, speedMph) {
     if (fahrenheitTemp <= 50 && speedMph >= 3) {
-        return (35.74 + (0.6215 * fahrenheitTemp) - (35.75 * Math.pow(speedMph, 0.16)) + (0.4275 * fahrenheitTemp * Math.pow(speedMph, 0.16)));
+        return `${(35.74 + (0.6215 * fahrenheitTemp) - (35.75 * Math.pow(speedMph, 0.16)) + (0.4275 * fahrenheitTemp * Math.pow(speedMph, 0.16))).toFixed(2)}°F`;
     } else {
         return "N/A";
     }

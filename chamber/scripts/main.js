@@ -1,4 +1,4 @@
-let date = new Date();
+const date = new Date();
 
 // Use querySelector to obtain html element
 const currentYear = document.querySelector("#year");
@@ -6,7 +6,7 @@ const currentYear = document.querySelector("#year");
 currentYear.textContent = date.getFullYear();
 
 // options for locale time format of dates
-const options = {
+const dateOptions = {
     weekday: "short",
     year: "numeric",
     month: "short",
@@ -72,17 +72,15 @@ if (date.getDay() === 1 || date.getDay() === 2) {
 // Must connect to API to retrieve
 // weather conditions according to the
 // geolocalization
-let windChillSpeed = kmhToMph(windSpeedkmh);
+let windChillSpeed = kmhToMph(windSpeedAPI);
 let fahTemp = celsiusToFahrenheit(celciusTemp);
-console.log(windChillSpeed);
-console.log(fahTemp);
 
 // This will fill the windChill
 // field in the weather section
 myWindChill = windChill(fahTemp, windChillSpeed);
 const windChillElement = document.querySelector("#windChill");
 if (windChillElement != null) {
-    windChillElement.textContent = `${myWindChill.toFixed(2)}°F`;
+    windChillElement.textContent = myWindChill;
     // console.log("My Wind Chill is: ", myWindChill);
 }
 
@@ -149,15 +147,18 @@ const listbutton = document.querySelector("#list");
 const display = document.querySelector("article.mygrid");
 
 // Event Listener Buttons
-gridbutton.addEventListener("click", () => {
-    display.classList.add("mygrid");
-    display.classList.remove("list");
-});
-
-listbutton.addEventListener("click", () => {
-    display.classList.add("list");
-    display.classList.remove("mygrid");
-});
+if (gridbutton != null && listbutton != null) {
+    //align
+    gridbutton.addEventListener("click", () => {
+        display.classList.add("mygrid");
+        display.classList.remove("list");
+    });
+    
+    listbutton.addEventListener("click", () => {
+        display.classList.add("list");
+        display.classList.remove("mygrid");
+    });
+}
 
 // fetch data for directory
 const jsonURL = "data/data.json";
@@ -204,8 +205,11 @@ const displayDirectoryData = (data) => {
         // Append to the page Parent
         cards.appendChild(card);
     });
-
+    
 };
 
 // load directory companies
-getDirectoryData(jsonURL);
+if (gridbutton != null && listbutton != null) {
+    //aligned here
+    getDirectoryData(jsonURL);
+}

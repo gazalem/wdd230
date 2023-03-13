@@ -5,7 +5,7 @@ const units = "metric"
 let lat = "";
 let lon = "";
 let celciusTemp = 0;
-let windSpeedkmh = 0;
+let windSpeedAPI = 0;
 
 
 const options = {
@@ -57,7 +57,6 @@ const displayWeatherData = (data) => {
     weatherImg.alt = `${String(data.weather[0].description).toUpperCase()}`;
     weatherDesc.textContent = data.weather[0].description;
     windSpeedkmh = ((data.wind.speed) * 3.6).toFixed(1);
-    console.log(windSpeedkmh);
     windSpeedElement.textContent = `${windSpeedkmh} km/h`;
 };
 
