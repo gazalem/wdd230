@@ -4,6 +4,8 @@ const part = "minutely,hourly,daily,alerts"
 const units = "metric"
 let lat = "";
 let lon = "";
+let celciusTemp = 0;
+let windSpeedkmh = 0;
 
 
 const options = {
@@ -45,15 +47,18 @@ async function getWeatherData(url) {
 }
 
 const displayWeatherData = (data) => {
-    const currentWeatherElement = document.getElementById("current-temp");
-    const iconWeatherElement = document.getElementById("weather-icon");
-    const weatherDesc = document.querySelector("figcaption");
-    currentWeatherElement.textContent = data.main.temp;
+    const tempElement = document.getElementById("temperature");
+    const weatherImg = document.getElementById("weatherIcon");
+    const weatherDesc = document.querySelector("#weatherStatus");
+    const windSpeedElement = document.querySelector("#windSpeed");
+    tempElement.textContent = `${(data.main.temp).toFixed(1)}°C`;
     iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    console.log(`iconURL: ${iconURL}`);
-    iconWeatherElement.src = iconURL;
-    iconWeatherElement.alt = data.weather[0].description;
+    weatherImg.src = iconURL;
+    weatherImg.alt = `${String(data.weather[0].description).toUpperCase()}`;
     weatherDesc.textContent = data.weather[0].description;
+    windSpeedkmh = ((data.wind.speed) * 3.6).toFixed(1);
+    console.log(windSpeedkmh);
+    windSpeedElement.textContent = `${windSpeedkmh} km/h`;
 };
 
 navigator.geolocation.getCurrentPosition(success, error, options);

@@ -1,4 +1,4 @@
-const date = new Date();
+let date = new Date();
 
 // Use querySelector to obtain html element
 const currentYear = document.querySelector("#year");
@@ -72,14 +72,17 @@ if (date.getDay() === 1 || date.getDay() === 2) {
 // Must connect to API to retrieve
 // weather conditions according to the
 // geolocalization
-function getWeather() {}
+let windChillSpeed = kmhToMph(windSpeedkmh);
+let fahTemp = celsiusToFahrenheit(celciusTemp);
+console.log(windChillSpeed);
+console.log(fahTemp);
 
 // This will fill the windChill
 // field in the weather section
-myWindChill = windChill(35, 8);
+myWindChill = windChill(fahTemp, windChillSpeed);
 const windChillElement = document.querySelector("#windChill");
 if (windChillElement != null) {
-    windChillElement.textContent = `${myWindChill.toFixed(2)}  F°`;
+    windChillElement.textContent = `${myWindChill.toFixed(2)}°F`;
     // console.log("My Wind Chill is: ", myWindChill);
 }
 
