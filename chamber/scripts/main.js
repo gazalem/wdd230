@@ -18,7 +18,7 @@ let lastModification = new Date(document.lastModified);
 let lastModifiedId = document.querySelector("#lastmodified");
 lastModifiedId.textContent = `\xa0${lastModification.toLocaleTimeString(
     "en-US",
-    options
+    dateOptions
 )}`;
 
 // options for locale time format of dates for current Date

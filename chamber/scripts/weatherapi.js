@@ -60,4 +60,4 @@ const displayWeatherData = (data) => {
     windSpeedElement.textContent = `${windSpeedkmh} km/h`;
 };
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+//navigator.geolocation.getCurrentPosition(success, error, options);

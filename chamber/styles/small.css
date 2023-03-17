@@ -364,6 +364,21 @@ p a {
     display: none;
 }
 
+.btn {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--accent-color-2);
+    color: var(--accent-color-1);
+    border-radius: 10px;
+    margin: 2.5rem auto;
+}
+
+.btn:hover {
+    background-color: var(--accent-color-3);
+    color: var(--third-color);
+}
+
 .discover {
     display: grid;
     grid-template-columns: minmax(32.5em, 50em);
