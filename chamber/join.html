@@ -50,42 +50,75 @@
         <div class="currentdate"></div>
     </header>
     <!-- Page Content -->
-        <form action="thankyou.html" method="get">
-            <!-- Applicant Information -->
-            <fieldset>
-                <legend>Applicant Information</legend>
-                <label class="entryData" >First Name* <input type="text" name="fname" required></label>
-                <label class="entryData">Last Name* <input type="text" name="lname" required></label>
-                <label class="entryData">Cell Phone* <input type="tel" name="phone" placeholder="+### ###-####" required plattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$"></label>
-                <label class="entryData" >Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-            </fieldset>
-            <!-- Business Information -->
-            <fieldset>
-                <legend>My Business Information</legend>
-                <label class="entryData">Business Name* <input type="text" name="business" required></label>
-                <label class="entryData">My Position in the Business <input type="text" name="title" pattern="[A-Za-z- ]{7,}" placeholder="Marketing Manager"></label>
-                <label class="entryData">Website<input type="url" name="url" placeholder="http//"></label>
-                <label class="entryData">Business Description
-                <textarea name="businessDescription" id="bus-description" rows="4" placeholder="Enter business description here. . ."></textarea></label>
-            </fieldset>
-            <!-- Membership Information -->
-            <fieldset>
-                <legend>Membership Level</legend>
-                <div class="radioBtns">
-                    <!-- align here -->
-                    <label><input type="radio" name="memberLevel" value="gold">Gold</label>
-                    <label><input type="radio" name="memberLevel" value="silver">Silver</label>
-                    <label><input type="radio" name="memberLevel" value="bronz">Bronze</label>
-                    <label><input type="radio" name="memberLevel" value="np">NP (Non-profit)</label>
-                </div>
-            </fieldset>
-            <!-- hidden field -->
-            <input type="hidden" id="time-now" name="time-now" value="">
-            <!-- Submit Button Form -->
-            <input type="submit" value = "Join My Condado del Rey Chamber" class="submitBtn">
-        </form>
-        <!-- Membership table -->
-        <!-- end of Membership table -->
+    <!-- Membership table -->
+    <table>
+        <caption>Benefits - Chamber of Commerce Membership</caption>
+        <thead>
+            <tr class="companyHeader"><th colspan="4">Condado del Rey<br>Chamber of Commerce</th></tr>
+            <tr>
+                <th class="companyHeader"></th>
+                <th class="tableTittles">Bronze</th>
+                <th class="tableTittles">Silver</th>
+                <th class="tableTittles">Gold</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature">Presence in Chamber Directoy</td>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td class="feature">Access to Workshops</td>
+                <td>❌</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <td class="feature">Feature Presence on Chamber Site</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✔️</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- end of Membership table -->
+    <!-- Form -->
+    <form action="thankyou.html" method="get">
+        <!-- Applicant Information -->
+        <fieldset>
+            <legend>Applicant Information</legend>
+            <label class="entryData" >First Name* <input type="text" name="fname" required></label>
+            <label class="entryData">Last Name* <input type="text" name="lname" required></label>
+            <label class="entryData">Cell Phone* <input type="tel" name="phone" placeholder="+### ###-####" required plattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$"></label>
+            <label class="entryData" >Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+        </fieldset>
+        <!-- Business Information -->
+        <fieldset>
+            <legend>My Business Information</legend>
+            <label class="entryData">Business Name* <input type="text" name="business" required></label>
+            <label class="entryData">My Position in the Business <input type="text" name="title" pattern="[A-Za-z- ]{7,}" placeholder="Marketing Manager"></label>
+            <label class="entryData">Website<input type="url" name="url" placeholder="http//"></label>
+            <label class="entryData">Business Description
+            <textarea name="businessDescription" id="bus-description" rows="4" placeholder="Enter business description here. . ."></textarea></label>
+        </fieldset>
+        <!-- Membership Information -->
+        <fieldset>
+            <legend>Membership Level</legend>
+            <div class="radioBtns">
+                <!-- align here -->
+                <label><input type="radio" name="memberLevel" value="gold">Gold &mdash; $500.00</label>
+                <label><input type="radio" name="memberLevel" value="silver">Silver &mdash; $300.00</label>
+                <label><input type="radio" name="memberLevel" value="bronz">Bronze &mdash; $150.00</label>
+                <label><input type="radio" name="memberLevel" value="np">NP (Non-profit)</label>
+            </div>
+        </fieldset>
+        <!-- hidden field -->
+        <input type="hidden" id="time-now" name="time-now" value="">
+        <!-- Submit Button Form -->
+        <input type="submit" value = "Join My Condado del Rey Chamber" class="submitBtn">
+    </form>
     <!-- footer -->
     <footer>
         <div class="leftfooter">
@@ -112,6 +145,7 @@
         </div>
     </footer>
     <!-- Scripts -->
+    <script src="scripts/weatherapi.js"></script>
     <script src="scripts/windchill.js"></script>
     <script src="scripts/main.js"></script>
 </body>

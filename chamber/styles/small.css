@@ -230,6 +230,49 @@ input[type="submit"]:hover {
     border-left: 6px solid var(--accent-color-3);
 }
 
+/* Joing Page */
+table {
+    margin: 3vh auto;
+    border-collapse: collapse;
+    width: 32rem;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.65);
+}
+caption {
+    caption-side: bottom;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+.companyHeader {
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    font-size: 2rem;
+}
+.companyHeader th {
+    padding: 1rem;
+}
+.tableTittles {
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+}
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tbody tr td {
+    padding: 0.5rem;
+    border: 1px solid #cfcfcf;
+}
+/* end Join Page */
+
+/* Contact */
+iframe {
+    display: block;
+    margin: 2rem auto;
+}
+/* end Contact */
+
 .herobanner {
     color: var(--third-color);
     padding: 0;

@@ -51,39 +51,22 @@
     </header>
     <!-- Page Content -->
         <form action="thankyou.html" method="get">
-            <!-- Applicant Information -->
+            <!-- Contact Information -->
             <fieldset>
-                <legend>Applicant Information</legend>
+                <legend>Contact Information</legend>
                 <label class="entryData" >First Name* <input type="text" name="fname" required></label>
                 <label class="entryData">Last Name* <input type="text" name="lname" required></label>
                 <label class="entryData">Cell Phone* <input type="tel" name="phone" placeholder="+### ###-####" required plattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$"></label>
                 <label class="entryData" >Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="entryData">Message
+                <textarea name="infoMessage" id="infoMessage" rows="4" placeholder="Enter your message here. . ."></textarea></label>
             </fieldset>
-            <!-- Business Information -->
-            <fieldset>
-                <legend>My Business Information</legend>
-                <label class="entryData">Business Name* <input type="text" name="business" required></label>
-                <label class="entryData">My Position in the Business <input type="text" name="title" pattern="[A-Za-z- ]{7,}" placeholder="Marketing Manager"></label>
-                <label class="entryData">Website<input type="url" name="url" placeholder="http//"></label>
-                <label class="entryData">Business Description
-                <textarea name="businessDescription" id="bus-description" rows="4" placeholder="Enter business description here. . ."></textarea></label>
-            </fieldset>
-            <!-- Membership Information -->
-            <fieldset>
-                <legend>Membership Level</legend>
-                <div class="radioBtns">
-                    <!-- align here -->
-                    <label><input type="radio" name="memberLevel" value="gold">Gold</label>
-                    <label><input type="radio" name="memberLevel" value="silver">Silver</label>
-                    <label><input type="radio" name="memberLevel" value="bronz">Bronze</label>
-                    <label><input type="radio" name="memberLevel" value="np">NP (Non-profit)</label>
-                </div>
-            </fieldset>
-            <!-- hidden field -->
-            <input type="hidden" id="time-now" name="time-now" value="">
             <!-- Submit Button Form -->
-            <input type="submit" value = "Join My  Lakeside Chamber" class="submitBtn">
+            <input type="submit" value = "Send Message" class="submitBtn">
         </form>
+        <!-- Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.324443507184!2d-79.52502698528066!3d9.034139343517307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca82ecba1a171%3A0x228bd494a3de302b!2sCondado%20Del%20Rey%2C%20Panama%20City%2C%20Panama!5e0!3m2!1sen!2sus!4v1679174614401!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- end Google Maps -->
     <!-- footer -->
     <footer>
         <div class="leftfooter">
@@ -110,6 +93,7 @@
         </div>
     </footer>
     <!-- Scripts -->
+    <script src="scripts/weatherapi.js"></script>
     <script src="scripts/windchill.js"></script>
     <script src="scripts/main.js"></script>
 </body>

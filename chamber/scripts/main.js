@@ -72,8 +72,8 @@ if (date.getDay() === 1 || date.getDay() === 2) {
 // Must connect to API to retrieve
 // weather conditions according to the
 // geolocalization
-let windChillSpeed = kmhToMph(windSpeedAPI);
-let fahTemp = celsiusToFahrenheit(celciusTemp);
+    let windChillSpeed = kmhToMph(windSpeedAPI);
+    let fahTemp = celsiusToFahrenheit(celciusTemp);
 
 // This will fill the windChill
 // field in the weather section
@@ -213,3 +213,12 @@ if (gridbutton != null && listbutton != null) {
     //aligned here
     getDirectoryData(jsonURL);
 }
+
+/*
+    Home Page Spotlight
+*/
+const spotlight = document.querySelector(".spotlight");
+
+const displaySpotlightMembers = (data) => {
+
+};
