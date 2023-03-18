@@ -360,6 +360,10 @@ p a {
     display: none;
 }
 
+.news h2 {
+    text-align: center;
+}
+
 .join {
     display: none;
 }
