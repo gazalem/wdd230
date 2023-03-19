@@ -2,7 +2,7 @@
 	"businessDirectory": [{
 			"name": "Wan Hao",
 			"address": "Plaza 88, Condado del Rey",
-			"phone": "(507) 397-6899",
+			"phone": "+(507) 397-6899",
 			"website": "https://www.degustapanama.com/panama/feed/wan-hao_100549.html",
 			"imageurl": "images/wanhao-logo.jpg",
 			"level": "gold"
@@ -10,15 +10,15 @@
 		{
 			"name": "Little Caesar Pizza",
 			"address": "Plaza Gren Park, Condado del Rey",
-			"phone": "(800) 396-6400",
+			"phone": "+(507) 396-6400",
 			"website": "https://pa.littlecaesars.com/es-pa/",
 			"imageurl": "images/little-caesars-pizza.png",
-			"level": "gold"
+			"level": "silver"
 		},
 		{
 			"name": "Helado Gourmet Gelarti",
 			"address": "Plaza Gren Park, Condado del Rey",
-			"phone": "(507) 6037-8113",
+			"phone": "+(507) 6037-8113",
 			"website": "https://www.gelarti.com/",
 			"imageurl": "images/gelarti-logo.png",
 			"level": "silver"
@@ -26,15 +26,15 @@
 		{
 			"name": "Super 99",
 			"address": "Ave. Condado del Rey",
-			"phone": "(507) 323-8865",
+			"phone": "+(507) 323-8865",
 			"website": "https://www.super99.com/",
 			"imageurl": "images/super99-logo.png",
-			"level": "gold"
+			"level": "bronze"
 		},
 		{
 			"name": "Domino's Pizza",
 			"address": "Plaza Mi Condado",
-			"phone": "(507) 230-0000",
+			"phone": "+(507) 230-0000",
 			"website": "https://www.dominospanama.com/",
 			"imageurl": "images/dominos-pizza-logo.png",
 			"level": "silver"
@@ -42,7 +42,7 @@
 		{
 			"name": "MegaStorage Mini Depósitos",
 			"address": "Ave. Condado del Rey",
-			"phone": "(507) 261-0000",
+			"phone": "+(507) 261-0000",
 			"website": "https://www.megastorage.com.pa/",
 			"imageurl": "images/mega-storage-logo.png",
 			"level": "bronze"
@@ -50,15 +50,15 @@
 		{
 			"name": "McDonald's",
 			"address": "Plaza Centennial",
-			"phone": "(507) 270-8652",
+			"phone": "+(507) 270-8652",
 			"website": "https://www.mcdonalds.com.pa/",
 			"imageurl": "https://live.staticflickr.com/7233/6867643986_766124d9fa_c.jpg",
-			"level": "bronze"
+			"level": "gold"
 		},
 		{
 			"name": "Sushi House",
 			"address": "Plaza Mi Condado",
-			"phone": "(507) 263-1122",
+			"phone": "+(507) 263-1122",
 			"website": "https://www.sushihouse.com.pa/",
 			"imageurl": "images/sushi-house.png",
 			"level": "bronze"
@@ -66,10 +66,10 @@
 		{
 			"name": "Planet Point",
 			"address": "Plaza Gren Park",
-			"phone": "(507) 368-7022",
+			"phone": "+(507) 368-7022",
 			"website": "https://www.facebook.com/planetpointpty/",
 			"imageurl": "images/planet-point.jpg",
-			"level": "np"
+			"level": "gold"
 		}
 	]
 }

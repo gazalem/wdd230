@@ -167,7 +167,15 @@ async function getDirectoryData(url) {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
-        displayDirectoryData(data.businessDirectory);
+        if (page === "index.html") {
+            // new function
+            displaySpotlightMembers(data.businessDirectory);
+        } else if (page === "directory.html") {
+            displayDirectoryData(data.businessDirectory);
+        }
+        else {
+            console.log(page);
+        }
     } else {
         console.log("Something get wrong!");
     }
@@ -209,16 +217,49 @@ const displayDirectoryData = (data) => {
 };
 
 // load directory companies
-if (gridbutton != null && listbutton != null) {
-    //aligned here
-    getDirectoryData(jsonURL);
-}
+getDirectoryData(jsonURL);
 
 /*
     Home Page Spotlight
 */
-const spotlight = document.querySelector(".spotlight");
 
+const spotlight = document.querySelector(".spotlight");
 const displaySpotlightMembers = (data) => {
+    
+    const spotData = data.filter((business) => business.level === "gold");
+    console.log(spotData);
+    let counter = 0;
+    
+    spotData.forEach(goldMembers => {
+        const spotImage = document.createElement("img");
+        const spotHeader = document.createElement("h2");
+        const spotinfo = document.createElement("p");
+        const spotLink = document.createElement("a");
+        const spotPhone = document.createElement("a");
+        const spotDivisor = document.createElement("hr");
+        const spotCompany = document.createElement("div");
+        counter += 1;
+        console.log(counter)
+        spotImage.src = goldMembers.imageurl;
+        spotImage.alt = `${goldMembers.name} Logo`;
+        spotHeader.textContent = goldMembers.name;
+        spotinfo.textContent = goldMembers.address;
+        spotLink.href = goldMembers.website;
+        spotLink.textContent = "Website";
+        spotLink.target = "_blank";
+        spotPhone.href = goldMembers.phone;
+        spotPhone.textContent = `${goldMembers.phone}`;
+        spotPhone.target = "_blank";
+
+        spotCompany.classList.add(`spotlight${counter}`);
+        spotCompany.appendChild(spotHeader);
+        spotCompany.appendChild(spotImage);
+        spotCompany.appendChild(spotDivisor);
+        spotinfo.appendChild(spotLink);
+        spotinfo.appendChild(spotPhone);
+        spotCompany.appendChild(spotinfo);
+
+        spotlight.appendChild(spotCompany);
+    });
 
 };
