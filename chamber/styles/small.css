@@ -390,7 +390,7 @@ iframe {
 }
 
 .spotlight img {
-    height: 15vh;
+    width: 100%;
 }
 
 p a {
