@@ -84,6 +84,10 @@ if (windChillElement != null) {
     // console.log("My Wind Chill is: ", myWindChill);
 }
 
+/*
+    Lazy Loading via JS
+*/
+
 // get all the images with the data-src attribute
 const images = document.querySelectorAll("img[data-src]");
 
@@ -120,6 +124,10 @@ if ("IntersectionObserver" in window) {
         loadImages(img);
     });
 }
+
+/*
+    end of lazy loading
+*/
 
 // check last visit
 const lastVisitElement = document.querySelector(".lastVisit");
